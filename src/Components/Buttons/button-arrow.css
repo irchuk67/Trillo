@@ -1,0 +1,49 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 68.75em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  background-image: linear-gradient(to right bottom, #FF3366, #BA265D);
+  background-size: cover;
+}
+
+.button__arrow {
+  color: #eb2f64;
+  display: inline-block;
+  margin: 0 auto;
+  border-bottom: 1px solid currentColor;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.button__arrow span {
+  margin-left: 3px;
+  transition: margin-left 0.2s;
+}
+.button__arrow:hover {
+  color: #333;
+}
+.button__arrow:hover span {
+  margin-left: 5px;
+}
+
+/*# sourceMappingURL=button-arrow.css.map */

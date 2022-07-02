@@ -1,0 +1,48 @@
+@import "../../main.scss";
+.btn{
+  position: relative;
+  border: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: 300;
+  text-transform: uppercase;
+  border-radius: 100px;
+  color: #ffffff;
+  overflow: hidden;
+  background-image: linear-gradient(to right bottom, $primary-light, $primary-dark);
+  transition: all .2s;
+  cursor: pointer;
+  & > *{
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    transition: all .2s;
+  }
+  &__visible{
+
+    padding: 2rem 7.5rem;
+  }
+
+  &__hidden{
+    display: inline-block;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    padding: 2rem 0;
+  }
+
+  &:hover{
+    background-image: linear-gradient(to right bottom, $primary-dark, $primary-light);
+  }
+  &:hover &__visible{
+    transform: translateY(100%);
+  }
+
+  &:hover  &__hidden{
+    top: 0;
+  }
+
+  &:focus{
+    animation: pulsate 1s infinite;
+  }
+}

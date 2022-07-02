@@ -1,0 +1,64 @@
+@import '../../main.scss';
+
+.menu-item{
+  width: 100%;
+  color: #ffffff;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: all .2s;
+  position: relative;
+
+  @media only screen and (max-width: $bp-medium){
+    justify-content: center;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    flex-direction: column;
+  }
+
+  &:not(:last-child){
+    margin-bottom: .5rem;
+
+    @media only screen and (max-width: $bp-medium){
+      margin: 0;
+    }
+  }
+
+  &::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: $primary;
+    transform: scaleY(0);
+    transition: transform .2s,
+                width .4s cubic-bezier(1,-0.1,.28,.88) .2s;
+  }
+
+  &:hover::before,
+  &--active::before{
+    transform: scaleY(1);
+    width: 100%;
+  }
+  &__icon{
+    margin-right: 1.5rem;
+    z-index: 10;
+    @media only screen and (max-width: $bp-small){
+      margin-right: 0;
+    }
+  }
+
+  &__heading{
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    z-index: 10;
+  }
+
+}
+
+
+

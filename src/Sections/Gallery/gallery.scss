@@ -1,0 +1,12 @@
+@import "../../main";
+
+.gallery{
+  display: flex;
+  width: 100%;
+
+  &--img{
+    width: 33.333%;
+
+    display: block;
+  }
+}

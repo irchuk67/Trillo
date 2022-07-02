@@ -1,0 +1,50 @@
+@import "../../main";
+
+.hotel-view{
+  background-color: #fff;
+}
+
+.detail{
+  display: flex;
+  justify-content: space-between;
+
+  background-color: $grey-light-1;
+  padding: 4.5rem;
+  font-size: 1.6rem;
+  color: $grey-dark-2;
+
+  @media only screen and (max-width: $bp-medium){
+    padding: 3rem;
+  }
+
+  @media only screen and (max-width: $bp-small){
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+@keyframes pulsate {
+  0%{
+    transform: scale(1);
+    box-shadow: none;
+  }
+
+  50%{
+    transform: scale(1.05);
+    box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+  }
+
+  100%{
+    transform: scale(1);
+    box-shadow: none;
+  }
+}
+

@@ -1,0 +1,64 @@
+@import "../../main";
+
+.user-reviews{
+  flex: 1;
+
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.review{
+  background-color: #ffffff;
+  box-shadow: $shadow-light;
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+
+  @media only screen and (max-width: $bp-medium){
+    padding: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  &__text{
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative;
+  }
+  &__user{
+    display: flex;
+    &__photo{
+      height: 4.5rem;
+      width: 4.5rem;
+      border-radius: 50%;
+    }
+    &__box{
+      margin-right: auto;
+      margin-left: .7rem;
+      font-size: 1.4rem;
+      font-weight: 300;
+    }
+    &__name{
+      text-transform: uppercase;
+
+    }
+  }
+  &__rate{
+    color: $primary;
+    font-size: 2.5rem;
+    font-weight: 300;
+  }
+
+  &::before{
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    line-height: 1;
+    font-family: sans-serif;
+    color: $grey-light-1;
+    font-size: 20rem;
+
+  }
+}
