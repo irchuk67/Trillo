@@ -22,9 +22,9 @@ export default class App extends Component{
                 <div className={'content'}>
                     <Sidebar items={
                         [
-                            [Home, "Hotel", false],
+                            [Home, "Hotel", true],
                             [FlightTakeoff, "Flight", false],
-                            [Key, "Car rental", true],
+                            [Key, "Car rental", false],
                             [Map, "Tours", false]
                         ]}
                     />
